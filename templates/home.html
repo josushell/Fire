@@ -74,7 +74,8 @@ https://www.tooplate.com/view/2117-infinite-loop
                     <div class="tm-intro-text-container">
                         <h2 class="tm-text-primary mb-4 tm-section-title">Technical Stack</h2>
                         <p class="mb-4 tm-intro-text">
-                          우리가 뭘 써서 구현했는지 쓰는게 어때 ㅇㅈ?</a></p>
+                          화재 재난을 AI로 극복하고자, 우리 팀은 화재 감지를 AI로 하여 사람이 알아 낼 수 없는 화재를 빠르게 감지하여 큰 불로 번지는 것을 막는 것을 목표로 하고 있습니다.
+                        이를 통해 보다 빠른 대처와 해결을 통해 재난을 극복하는 것에 초점을 두고 있습니다.  </a></p>
                     </div>
                 </div>
 
@@ -86,10 +87,13 @@ https://www.tooplate.com/view/2117-infinite-loop
                 </div>
                 <div class="col-lg-5">
                     <div class="tm-intro-text-container">
-                        <h2 class="tm-text-primary mb-4">1번</h2>
+                        <h2 class="tm-text-primary mb-4">모델 선정</h2>
                         <p class="mb-4 tm-intro-text">
-                          1번에 대한 내용</p>
+                          용량과 계산을 줄일 수 있는 지에 초점을 두어 연산량을 줄이는 데 집중하여 구현된 SuffleNet을 사용하였습니다.</p>
                     </div>
+                    <div class="tm-continue">
+                      <a href="#testimonials" class="tm-intro-text tm-btn-primary">Details</a>
+                  </div>
                 </div>
                 
                 <div class="col-lg-1">
@@ -97,9 +101,9 @@ https://www.tooplate.com/view/2117-infinite-loop
                 </div>
                 <div class="col-lg-5">
                     <div class="tm-intro-text-container">
-                        <h2 class="tm-text-primary mb-4">2번</h2>
+                        <h2 class="tm-text-primary mb-4">Quantization 양자화</h2>
                         <p class="mb-4 tm-intro-text">
-                          2번에 대한 내용<a rel="nofollow" href="https://www.pexels.com"> 사용된 모델 오픈소스 사이트 링크 쓰셈 </a> 2번 내용 쓰셈</p>
+                          딥러닝 모델에 저장된 float 형 weight들의 분포를 관찰하여 정수형으로 변환하였습니다. </a> </p>
                     </div>
                 </div>
 
@@ -111,12 +115,11 @@ https://www.tooplate.com/view/2117-infinite-loop
                 </div>
                 <div class="col-lg-5">
                     <div class="tm-intro-text-container">
-                        <h2 class="tm-text-primary mb-4">3번</h2>
-                        <p class="mb-4 tm-intro-text"> 3번 내용 쓰셈</p>
+                        <h2 class="tm-text-primary mb-4">Pruning 가지치기</h2>
+                        <p class="mb-4 tm-intro-text"> 모델에 저장된 weight, bias 중, 중요하지 않은 값들을 찾아 지워 전체 계산량을 줄였습니다. 
+                          다양한 기법중 간단하고 직관적인 기준인 L1_Norm을 선택하여 기존 모델의 전체 파라미터 중 20%를 제거해주었습니다</p>
                           
-                          <div class="tm-continue">
-                            <a href="#testimonials" class="tm-intro-text tm-btn-primary">Learn More</a>
-                        </div>
+    
                     </div>
                 </div>
                 
@@ -125,12 +128,10 @@ https://www.tooplate.com/view/2117-infinite-loop
                 </div>
                 <div class="col-lg-5">
                     <div class="tm-intro-text-container">
-                      <h2 class="tm-text-primary mb-4">4번</h2>
-                        <p class="mb-4 tm-intro-text"> 4번 내용 쓰셈 </p>
-                          
-                          <div class="tm-continue">
-                            <a href="#testimonials" class="tm-intro-text tm-btn-primary">Details</a>
-                        </div>
+                      <h2 class="tm-text-primary mb-4">openCV</h2>
+                        <p class="mb-4 tm-intro-text"> 화재 가능성이 있는 부분들을 모두 표시하여, 화재가 어느부분에서 발생했는지 알 수 있도록 했습니다. 또한 객체 탐지 알고리즘에 비하여 훨씬 적은 계산량으로 이를 수행할 수 있습니다. 
+                        </p>
+                        
                     </div>
                 </div>
 
@@ -144,32 +145,33 @@ https://www.tooplate.com/view/2117-infinite-loop
       <div class="container tm-testimonials-content">
         <div class="row">
           <div class="col-lg-12 tm-content-box">
-            <h2 class="text-white text-center mb-4 tm-section-title">여기는 아마 동작 원리를 쓰지 않을려나</h2>
+            <h2 class="text-white text-center mb-4 tm-section-title">모델의 경량화</h2>
             <p class="mx-auto tm-section-desc text-center">
-                난 웹이 싫어...논리적으로 웹이 싫은 이유
+                
               </p>
             <div class="mx-auto tm-gallery-container tm-gallery-container-2">
               <div class="tm-testimonials-carousel">
                 <figure class="tm-testimonial-item">
-                  <blockquote>1. javascript가 쓰레기 같은 언어다.
+                  <blockquote>1. ShuffleNet
                     <p>
-                        솔직히 자바스크립트는 언어가 이상하다. dynamic storage binding + dynamic type binding 조합 개극혐
+                      object detection에 많이 사용되고 있는 YOLOv3 기반의 FireNet의 weight 파일의 크기는 235MB, ShuffleNet은 0.76MB로 상대적으로 크게 가벼운 모델임을 확인할 수 있습니다.
+
                       </p>
                   </blockquote>
                 </figure>
 
                 <figure class="tm-testimonial-item">
-                  <blockquote>2. 웹은 이상하다.
+                  <blockquote>2. kaggle fire dataset
                       <p>
-                          솔직히 말이 안돼 기술 스택이 이상해
+                        kaggle에서 제공하는 fire dataset에 약 750개의 fire image와 약 250개의 non fire image를 통해 정확도를 계산한 결과입니다.
                       </p>
                   </blockquote>
                 </figure>
 
                 <figure class="tm-testimonial-item">
-                  <blockquote>3. 그냥 싫어;;
+                  <blockquote>3. Pruning
                       <p>
-                          그냥 싫 어
+                        Pruning을 완료한 후 정확도를 다시 측정하였을 때 94.22%로, 경량화 후에도 우수한 성능을 유지했습니다.
                       </p>
                   </blockquote>
                 </figure>
@@ -180,65 +182,77 @@ https://www.tooplate.com/view/2117-infinite-loop
       </div>
       <div class="tm-bg-overlay"></div>
     </section>
-
     <section id="gallery" class="tm-section-pad-top">
       <div class="container tm-container-gallery">
         <div class="row">
           <div class="text-center col-12">
-              <h2 class="tm-text-primary tm-section-title mb-4">여기는 뭘 보여줄까</h2>
+              <h2 class="tm-text-primary tm-section-title mb-4">기술 구현</h2>
               <p class="mx-auto tm-section-desc">
-                  간단하게 결과들? 동작들? 뭐지? 걍 갤러리 css 있길래 가져왔음
+                  사용된 unity, opencv, 딥러닝 모델들의 구현
               </p>
-          </div>            
+              <p class="mx-auto tm-section-desc">
+                이를 발전시켜 CCTV 영상을 실시간으로 분석하여 빠른 화재 탐지를 가능하게 합니다. 
+            </p>
+              <video width="1000" height="600" controls
+              poster="{{ url_for('static', filename='img/1.png') }}">
+                <source src="./forest.mp4" type="video/mp4">
+                <strong>Your browser does not support the video tag.</strong> 
+              </video>
+
+              <video width="1000" height="600" controls
+              poster="{{ url_for('static', filename='img/1.png') }}">
+                <source src="./forest_after.mp4" type="video/mp4">
+                <strong>Your browser does not support the video tag.</strong>
+              </video>
+          </div>          
         </div>
         <div class="row">
-            <div class="col-12">
-                <div class="mx-auto tm-gallery-container">
-                    <div class="grid tm-gallery">
-                      <a href="{{ url_for('static', filename='img/gallery-img-01.jpg') }}">
-                        <figure class="effect-honey tm-gallery-item">
-                          <img src="{{ url_for('static', filename='img/gallery-tn-01.jpg') }}" alt="Image 1" class="img-fluid">
-                          <figcaption>
-                            <h2><i>Physical Health <span>Exercise!</span></i></h2>
-                          </figcaption>
-                        </figure>
-                      </a>
-                      <a href="{{ url_for('static', filename='img/gallery-img-02.jpg') }}">
-                        <figure class="effect-honey tm-gallery-item">
-                          <img src="{{ url_for('static', filename='img/gallery-tn-02.jpg') }}" alt="Image 2" class="img-fluid">
-                          <figcaption>
-                            <h2><i>Rain on Glass <span>Second Image</span></i></h2>
-                          </figcaption>
-                        </figure>
-                      </a>
-                      <a href="{{ url_for('static', filename='img/gallery-img-03.jpg') }}">
-                        <figure class="effect-honey tm-gallery-item">
-                          <img src="{{ url_for('static', filename='img/gallery-tn-03.jpg') }}" alt="Image 3" class="img-fluid">
-                          <figcaption>
-                            <h2><i><span>Sea View</span> Mega City</i></h2>
-                          </figcaption>
-                        </figure>
-                      </a>
-                      <a href="{{ url_for('static', filename='img/gallery-img-04.jpg') }}">
-                        <figure class="effect-honey tm-gallery-item">
-                          <img src="{{ url_for('static', filename='img/gallery-tn-04.jpg') }}" alt="Image 4" class="img-fluid">
-                          <figcaption>
-                            <h2><i>Dream Girl <span>Thoughts</span></i></h2>
-                          </figcaption>
-                        </figure>
-                      </a>
-                      <a href="{{ url_for('static', filename='img/gallery-img-05.jpg') }}">
-                        <figure class="effect-honey tm-gallery-item">
-                          <img src="{{ url_for('static', filename='img/gallery-tn-05.jpg') }}" alt="Image 5" class="img-fluid">
-                          <figcaption>
-                            <h2><i><span>Workstation</span> Offices</i></h2>
-                          </figcaption>
-                        </figure>
-                      </a>
-                    </div>
-                </div>                
-            </div>        
-          </div>
+          <div class="col-12">
+              <div class="mx-auto tm-gallery-container">
+                  <div class="grid tm-gallery">
+                    <a href="{{ url_for('static', filename='img/fire.90.png') }}">
+                      <figure class="effect-honey tm-gallery-item">
+                        <img src="{{ url_for('static', filename='img/fire.90.png') }}" alt="Image 1" class="img-fluid">
+                        <figcaption>
+                          <h2><i>detect1<span>openCV</span></i></h2>
+                        </figcaption>
+                      </figure>
+                    </a>
+                    <a href="{{ url_for('static', filename='img/fire.123.png') }}">
+                      <figure class="effect-honey tm-gallery-item">
+                        <img src="{{ url_for('static', filename='img/fire.178.png') }}" alt="Image 2" class="img-fluid">
+                        <figcaption>
+                          <h2><i>detect2 <span>openCV</span></i></h2>
+                        </figcaption>
+                      </figure>
+                    </a>
+                    <a href="{{ url_for('static', filename='img/fire.298.png') }}">
+                      <figure class="effect-honey tm-gallery-item">
+                        <img src="{{ url_for('static', filename='img/fire.298.png') }}" alt="Image 3" class="img-fluid">
+                        <figcaption>
+                          <h2><i><span>detect3</span> openCV</i></h2>
+                        </figcaption>
+                      </figure>
+                    </a>
+                    <a href="{{ url_for('static', filename='img/fire.726.png') }}">
+                      <figure class="effect-honey tm-gallery-item">
+                        <img src="{{ url_for('static', filename='img/fire.726.png') }}" alt="Image 4" class="img-fluid">
+                        <figcaption>
+                          <h2><i>detect4 <span>openCV</span></i></h2>
+                        </figcaption>
+                      </figure>
+                    </a>
+                    <a href="{{ url_for('static', filename='img/fire.178.png') }}">
+                      <figure class="effect-honey tm-gallery-item">
+                        <img src="{{ url_for('static', filename='img/fire.178.png') }}" alt="Image 5" class="img-fluid">
+                        <figcaption>
+                          <h2><i><span>detect5</span>openCV</i></h2>
+                        </figcaption>
+                      </figure>
+                    </a>
+                  </div>
+              </div>                
+          </div>  
       </div>
     </section>
 
@@ -248,9 +262,9 @@ https://www.tooplate.com/view/2117-infinite-loop
     <div class="container tm-testimonials-content">
       <div class="row">
         <div class="col-lg-12 tm-content-box">
-          <h2 class="text-white text-center mb-4 tm-section-title">여기서는 사진을 넣는 거지</h2>
+          <h2 class="text-white text-center mb-4 tm-section-title">딥러닝의 기술을 테스트 해보기</h2>
           <p class="mx-auto tm-section-desc text-center">
-              그래서 사진을 넣으면 함수 돌려서 결과 해줌
+              사용자의 사진을 받아 실제 화재의 진위를 판별해줍니다.
             </p>
           <div class="mx-auto tm-gallery-container tm-gallery-container-2">
             <div class="tm-testimonials-carousel">

@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 from werkzeug.utils import secure_filename
-import final
+#import final
 
 app = Flask(__name__)
 
@@ -13,7 +13,7 @@ def home():
 	elif(request.method == 'POST'):
 		f=request.files['img-path']
 		f.save('./uploads/'+secure_filename(f.filename))
-		detection=final.result()
+		detection=1#final.result()
 		if(detection==0):
 			return render_template("fire.html")
 		else:
